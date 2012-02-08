@@ -26,10 +26,6 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>cml</groupId>
-			<artifactId>jc-core</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 		</dependency>
@@ -44,8 +40,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>cml</groupId>
-			<artifactId>jc-testutils</artifactId>
+            <groupId>cml</groupId>
+            <artifactId>jc-top-testutils</artifactId>
+            <version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>
 
