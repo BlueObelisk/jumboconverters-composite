@@ -35,7 +35,6 @@ public class ChemdrawModule extends AbstractConverterModule {
 		return converterList;
     }
 
-	@Override
 	public List<MimeType> getMimeTypeList() {
 		if (mimeTypeList == null) {
 			mimeTypeList = new ArrayList<MimeType>();

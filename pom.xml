@@ -5,10 +5,17 @@
 
     <parent>
         <groupId>cml</groupId>
-        <artifactId>jumbo-converters</artifactId>
+        <artifactId>jumboconverters2-parent</artifactId>
         <version>0.3-SNAPSHOT</version>
     </parent>
 
+	<repositories>
+	  <repository>
+	    <id>ucc-repo</id>
+	    <url>http://maven.ch.cam.ac.uk/m2repo</url>
+	  </repository>
+	</repositories>
+	
     <artifactId>jc-composite</artifactId>
     <packaging>pom</packaging>
     <name>jc-composite</name>

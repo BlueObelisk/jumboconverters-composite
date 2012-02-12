@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import org.xmlcml.cml.converters.AbstractConverter;
 import org.xmlcml.cml.converters.Converter;
 import org.xmlcml.cml.converters.MimeType;
-import org.xmlcml.cml.converters.cml.CMLCommon;
 
 public class CDX2CMLConverter extends AbstractConverter implements
 		Converter {

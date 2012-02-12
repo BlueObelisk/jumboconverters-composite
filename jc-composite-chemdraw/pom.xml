@@ -6,7 +6,7 @@
 
 	<parent>
 		<groupId>cml</groupId>
-		<artifactId>jumbo-converters</artifactId>
+		<artifactId>jc-composite</artifactId>
 		<version>0.3-SNAPSHOT</version>
 	</parent>
 
@@ -18,12 +18,23 @@
 		<dependency>
 			<groupId>cml</groupId>
 			<artifactId>chemdraw-converter</artifactId>
+			<version>0.2-SNAPSHOT</version>
 			<exclusions>
 				<exclusion>
 					<groupId>cml</groupId>
 					<artifactId>jumbo</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+        <dependency>
+            <groupId>${jumbo.groupId}</groupId>
+            <artifactId>jumbo</artifactId>
+            <version>${jumbo.version}</version>
+        </dependency>
+		<dependency>
+			<groupId>cml</groupId>
+			<artifactId>jc-top-core</artifactId>
+            <version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
