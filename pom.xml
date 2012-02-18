@@ -25,6 +25,25 @@
         <module>jc-composite-chemdraw</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>cml</groupId>
+            <artifactId>jc-top-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>cml</groupId>
+			<artifactId>jc-top-testutils</artifactId>
+            <version>${project.version}</version>
+			<scope>test</scope>
+		</dependency>
+    </dependencies>
 
 </project>
 
