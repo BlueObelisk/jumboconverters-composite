@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cml</groupId>
+        <groupId>org.xml-cml.jc</groupId>
         <artifactId>jc-parent</artifactId>
         <version>0.3-SNAPSHOT</version>
     </parent>
@@ -21,24 +21,31 @@
     <name>jc-composite</name>
 
     <modules>
+        <module>jc-composite-core</module>
         <module>jc-composite-all</module>
         <module>jc-composite-chemdraw</module>
     </modules>
 
     <dependencies>
         <dependency>
-            <groupId>cml</groupId>
+            <groupId>${jc.groupId}</groupId>
             <artifactId>jc-top-core</artifactId>
             <version>${project.version}</version>
         </dependency>
 
 		<dependency>
+			<groupId>${cdx.groupId}</groupId>
+			<artifactId>chemdraw-converter</artifactId>
+			<version>0.2-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 		<dependency>
-			<groupId>cml</groupId>
+			<groupId>${jc.groupId}</groupId>
 			<artifactId>jc-top-testutils</artifactId>
             <version>${project.version}</version>
 			<scope>test</scope>

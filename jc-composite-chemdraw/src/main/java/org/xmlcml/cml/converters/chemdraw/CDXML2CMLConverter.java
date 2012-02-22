@@ -6,7 +6,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.base.CMLUtil;
-import org.xmlcml.cml.chemdraw.CDXML2CMLObject;
+import org.xmlcml.cml.chemdraw.CDXML2CMLProcessor;
 import org.xmlcml.cml.converters.AbstractConverter;
 import org.xmlcml.cml.converters.Converter;
 import org.xmlcml.cml.converters.MimeType;
@@ -34,7 +34,7 @@ public class CDXML2CMLConverter extends AbstractConverter implements
 	@Override
 	public Element convertToXML(Element cdxml) {
 		LOG.debug("CDXML2CML");
-		CDXML2CMLObject cd = new CDXML2CMLObject();
+		CDXML2CMLProcessor cd = new CDXML2CMLProcessor();
 		cd.setCleanMolecules(cleanMolecules);
 		cd.setFlatten(flatten);
 		cd.setRescale(rescale);

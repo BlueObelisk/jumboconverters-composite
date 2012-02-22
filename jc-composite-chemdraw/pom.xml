@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>cml</groupId>
+		<groupId>org.xml-cml.jc</groupId>
 		<artifactId>jc-composite</artifactId>
 		<version>0.3-SNAPSHOT</version>
 	</parent>
@@ -16,12 +16,12 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>cml</groupId>
+			<groupId>${cdx.groupId}</groupId>
 			<artifactId>chemdraw-converter</artifactId>
 			<version>0.2-SNAPSHOT</version>
 			<exclusions>
 				<exclusion>
-					<groupId>cml</groupId>
+					<groupId>${jumbo.groupId}</groupId>
 					<artifactId>jumbo</artifactId>
 				</exclusion>
 			</exclusions>
