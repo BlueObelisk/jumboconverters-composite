@@ -1,6 +1,6 @@
 package org.xmlcml.cml.converters.composite.core;
 
-import org.xmlcml.cml.converters.registry.AbstractConverterModule;
+import org.xmlcml.cml.converters.AbstractConverterModule;
 
 /**
  * @author pm286

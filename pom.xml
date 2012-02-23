@@ -22,8 +22,9 @@
 
     <modules>
         <module>jc-composite-core</module>
-        <module>jc-composite-all</module>
         <module>jc-composite-chemdraw</module>
+        <module>jc-composite-all</module>
+        <module>jc-composite-test</module>
     </modules>
 
     <dependencies>
