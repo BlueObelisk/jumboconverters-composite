@@ -25,21 +25,23 @@ public class CompositeConverterRegistryTest {
 	String FOO = "chemical/x-foo";
 	TypePair PAIR_OK  = new TypePair(FOO, CML);
 	TypePair PAIR_MISSING  = new TypePair(FOO, CIF);
-	private static int SIZE = 5;
+	private static int TYPE_SIZE = 2;
+	private static int CONVERTER_SIZE = 2;
+	
 
     @Test
     public void testMap() {
     	Map<TypePair, List<Converter>> map = ConverterRegistry.getDefaultConverterRegistry().getMap();
     	Assert.assertNotNull(map);
     	// size will change as more are added
-    	Assert.assertEquals(SIZE, map.size());
+    	Assert.assertEquals(TYPE_SIZE, map.size());
     }
 
     @Test
     public void testList() {
     	List<Converter> converterList = ConverterRegistry.getDefaultConverterRegistry().getConverterList();
     	Assert.assertNotNull(converterList);
-    	Assert.assertEquals(SIZE, converterList.size());
+    	Assert.assertEquals(CONVERTER_SIZE, converterList.size());
     }
 
     @Test
@@ -70,12 +72,12 @@ public class CompositeConverterRegistryTest {
     public void testFindConverter() {
     	List<Converter> converters = ConverterRegistry.getDefaultConverterRegistry().findConverters(
     			ChemdrawModule.CDX_TYPE.getMimeType(), CMLCommon.CML_TYPE.getMimeType());
-    	Assert.assertNotNull("amber", converters);
+    	Assert.assertNotNull("compos", converters);
     	for (Converter converter : converters) {
     		System.out.println("Converter: "+converter);
     	}
-    	Assert.assertEquals("amber", 1, converters.size());
-    	Assert.assertEquals("amber", "org.xmlcml.cml.converters.compchem.amber.in.AmberFF2XMLConverter", converters.get(0).getClass().getName());
+    	Assert.assertEquals("compos", 1, converters.size());
+    	Assert.assertEquals("compos", "org.xmlcml.cml.converters.compchem.composite.chemdraw.CDX2CMLConverter", converters.get(0).getClass().getName());
     }
 
     @Test
@@ -85,7 +87,7 @@ public class CompositeConverterRegistryTest {
 //    	for (Converter converter : converters) {
 //    		System.out.println(converter);
 //    	}
-    	Assert.assertEquals("cml", 2, converters.size());
+    	Assert.assertEquals("cml", 1, converters.size());
     }
 
 	@Test
@@ -162,14 +164,14 @@ public class CompositeConverterRegistryTest {
 		ConverterRegistry converterRegistry = ConverterRegistry.getDefaultConverterRegistry();
 		List<Converter> converterList = converterRegistry.getConverterList();
 		Assert.assertNotNull(converterList);
-		Assert.assertEquals("converterList", SIZE, converterList.size());
+		Assert.assertEquals("converterList", CONVERTER_SIZE, converterList.size());
 	}
 
 	@Test
 	public void testSingletonConverterRegistryList() {
 		List<Converter> converterList = ConverterRegistry.getDefaultConverterRegistry().getConverterList();
 		Assert.assertNotNull(converterList);
-		Assert.assertEquals("converterList", SIZE, converterList.size());
+		Assert.assertEquals("converterList", CONVERTER_SIZE, converterList.size());
 	}
 
 }
