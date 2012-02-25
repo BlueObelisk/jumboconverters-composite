@@ -8,7 +8,6 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.chemdraw.CDX2CDXML;
 import org.xmlcml.cml.converters.AbstractConverter;
-import org.xmlcml.cml.converters.Converter;
 import org.xmlcml.cml.converters.MimeType;
 
 public class CDX2CDXMLConverter extends AbstractConverter {

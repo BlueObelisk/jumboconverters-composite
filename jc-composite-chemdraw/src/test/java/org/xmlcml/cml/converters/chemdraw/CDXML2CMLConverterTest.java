@@ -5,14 +5,14 @@ import java.io.IOException;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.cml.converters.testutils.RegressionSuite;
+import org.xmlcml.cml.converters.testutils.JumboConvertersRegressionSuite;
 
 public class CDXML2CMLConverterTest {
 
    @Test
    @Ignore
    public void testConverter() throws IOException {
-      RegressionSuite.run("cdx/cdxml", "cdxml", "cml",
+	   JumboConvertersRegressionSuite.run("cdx/cdxml", "cdxml", "cml",
                           new CDXML2CMLConverter());
    }
    

@@ -13,18 +13,31 @@
 	<artifactId>jc-composite-chemdraw</artifactId>
 	<name>jc-composite-chemdraw</name>
 
-	<dependencies>
+    <properties>
+		<chemdraw.groupId>org.xml-cml.chemdraw</chemdraw.groupId>
+		<chemdraw.artifactId>chemdraw-converter</chemdraw.artifactId>
+		<chemdraw.version>0.3-SNAPSHOT</chemdraw.version>
+    </properties>
 
-		<dependency>
-			<groupId>${cdx.groupId}</groupId>
-			<artifactId>chemdraw-converter</artifactId>
-			<version>0.2-SNAPSHOT</version>
+	<dependencies>
+	    <dependency>
+			<groupId>${jc.groupId}</groupId>
+			<artifactId>jc-composite-core</artifactId>
+			<version>${project.version}</version>
+	    </dependency>
+	    
+	    <dependency>
+			<groupId>${chemdraw.groupId}</groupId>
+			<artifactId>${chemdraw.artifactId}</artifactId>
+			<version>${chemdraw.version}</version>
+			<!-- 
 			<exclusions>
 				<exclusion>
 					<groupId>${jumbo.groupId}</groupId>
 					<artifactId>jumbo</artifactId>
 				</exclusion>
 			</exclusions>
+			-->
 		</dependency>
 
 	</dependencies>

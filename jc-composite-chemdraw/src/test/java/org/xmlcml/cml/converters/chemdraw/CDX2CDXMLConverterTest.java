@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.cml.converters.testutils.RegressionSuite;
+import org.xmlcml.cml.converters.testutils.JumboConvertersRegressionSuite;
 
 public class CDX2CDXMLConverterTest {
 
@@ -16,7 +16,7 @@ public class CDX2CDXMLConverterTest {
    @Test
    @Ignore
    public void testConvertToXMLElement() throws IOException {
-      RegressionSuite.run("cdx/cdx", "cdx", "cdx.xml",
+      JumboConvertersRegressionSuite.run("cdx/cdx", "cdx", "cdx.xml",
                             new CDX2CDXMLConverter());
    }
 }

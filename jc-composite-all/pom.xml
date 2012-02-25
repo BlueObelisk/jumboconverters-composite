@@ -15,7 +15,7 @@
 	
     <dependencies>
         <dependency>
-            <groupId>${cdx.groupId}</groupId>
+            <groupId>${jc.groupId}</groupId>
             <artifactId>jc-composite-chemdraw</artifactId>
             <version>${project.version}</version>
         </dependency>

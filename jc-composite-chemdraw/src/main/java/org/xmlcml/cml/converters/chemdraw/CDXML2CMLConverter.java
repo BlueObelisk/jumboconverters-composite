@@ -34,7 +34,7 @@ public class CDXML2CMLConverter extends AbstractConverter implements
 	@Override
 	public Element convertToXML(Element cdxml) {
 		LOG.debug("CDXML2CML");
-		CDXML2CMLProcessor cd = new CDXML2CMLProcessor();
+		CDXML2CMLProcessor cd = new org.xmlcml.cml.chemdraw.CDXML2CMLProcessor();
 		cd.setCleanMolecules(cleanMolecules);
 		cd.setFlatten(flatten);
 		cd.setRescale(rescale);
